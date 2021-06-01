@@ -47,7 +47,19 @@ class MainActivity : AppCompatActivity() {
         background = findViewById(R.id.background)
         blurHelper!!.setupImageBlurBackground(this, background!!)
 
-        binding.title.text = "Application Title"
+        binding.title.text = "Config Change Checker"
+        binding.data.text = "Portrait Orientation"
+    }
+
+    override fun onConfigurationChanged(newConfig: Configuration) {
+        super.onConfigurationChanged(newConfig)
+
+        // Checks the orientation of the screen
+        if (newConfig.orientation === Configuration.ORIENTATION_LANDSCAPE) {
+            binding.data.text = "Landscape Orientation"
+        } else if (newConfig.orientation === Configuration.ORIENTATION_PORTRAIT) {
+            binding.data.text = "Portrait Orientation"
+        }
     }
 
 }

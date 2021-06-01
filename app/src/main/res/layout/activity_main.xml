@@ -52,11 +52,14 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:gravity="center"
+        tools:text="Data goes here.."
+        android:textSize="16sp"
         android:padding="@dimen/d4"
         app:layout_constraintBottom_toBottomOf="@+id/background"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"></TextView>
+        app:layout_constraintTop_toBottomOf="@+id/title" />
 
     <TextView
         android:id="@+id/title"
@@ -71,7 +74,7 @@
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="10"
-        android:text="@string/app_name"
+        tools:text="@string/app_name"
         android:textColor="@color/colorTextWHITE"
         android:textSize="@dimen/t18"
         app:layout_constraintEnd_toEndOf="parent"
